@@ -1,19 +1,23 @@
-<div class="container">
-    <br>
-    <div class="row">
-        <ng-container *ngFor="let product of products; index as productId">
-            <div class="col-sm">
-                <a [routerLink]="[ product._id ]">
-                    <div class="card">
-                        <img src="{{ product.coverImage }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>  
-                            <p class="card-text">{{ product.description }}</p>                                                        
+<div class="wrapper">
+    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/building.jpg');">
+        <div class="filter"></div>
+    </div>
+    <div class="container">
+        <br>
+        <div class="row">
+            <ng-container *ngFor="let product of products; index as productId">
+                <div class="col-sm">
+                    <a [routerLink]="[ product._id ]">
+                        <div class="card">
+                            <img src="{{ product.coverImage }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>  
+                                <p class="card-text">{{ product.description }}</p>                                                        
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        </ng-container>
+                    </a>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>
-
